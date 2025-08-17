@@ -20,7 +20,7 @@ const signup = async ({ name, email, password }) => {
         return { newUser: newUser, tokens: { accessToken, refreshToken } }
 
     } catch (error) {
-        // console.log("Error in signup services \n" + error)
+        console.log("Error in signup services \n" + error)
         throw error
 
 
@@ -31,7 +31,7 @@ const signup = async ({ name, email, password }) => {
 const login = async ({ email, password }) => {
     try {
         const user = await User.findOne({ email })
-        console.log(user)
+
         if (!user) throw new HttpError("Invalid Password or Email", 409);
 
 

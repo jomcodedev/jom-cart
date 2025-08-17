@@ -34,7 +34,7 @@ const useCartStore = create((set, get) => ({
                 const existingItem = previousState.cart.find((item) => item._id === product._id);
                 let updatedCart;
                 if (existingItem) {
-                    console.log("existing")
+
                     updatedCart = previousState.cart.map((item) =>
                         (item._id === product._id) ?
                             { ...item, quantity: item.quantity + 1 } :

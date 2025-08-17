@@ -10,7 +10,7 @@ const useCouponStore = create((set, get) => ({
     getMyCoupon: async () => {
         try {
             const response = await axios.get("/coupons")
-            console.log("getMyCoupon:", response)
+
             set({ coupon: response.data })
 
 
@@ -25,7 +25,7 @@ const useCouponStore = create((set, get) => ({
                 set({ coupon: response.data, isCouponApplied: true })
                 const calculateTotals = useCartStore.getState().calculateTotals
                 calculateTotals()
-                console.log("Res Apply Coupon:", response)
+
                 toast.success("Coupon Applied Successfully")
             }
 

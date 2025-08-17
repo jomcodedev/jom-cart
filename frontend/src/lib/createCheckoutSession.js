@@ -23,8 +23,7 @@ const createCheckout = async () => {
         const result = await stripe.redirectToCheckout({
             sessionId: checkoutSessionData.sessionId,
         });
-        console.log("RESULT: ", result);
-        console.log("Session: ", session);
+
     } catch (error) {
         console.log("Error in Checkout Session:", error)
     }
