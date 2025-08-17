@@ -4,12 +4,12 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path"
 
-// import authRouter from "./routes/auth.route.js"
-// import productsRouter from "./routes/products.route.js";
-// import cartRouter from "./routes/cart.route.js";
-// import couponRouter from "./routes/coupon.route.js";
-// import paymentRouter from "./routes/payment.routes.js";
-// import analyticsRouter from "./routes/analytics.route.js"
+import authRouter from "./routes/auth.route.js"
+import productsRouter from "./routes/products.route.js";
+import cartRouter from "./routes/cart.route.js";
+import couponRouter from "./routes/coupon.route.js";
+import paymentRouter from "./routes/payment.routes.js";
+import analyticsRouter from "./routes/analytics.route.js"
 
 dotenv.config();
 
@@ -26,18 +26,18 @@ app.use(cookieParser());
 
 
 
-// app.use("/api/auth", authRouter);
-// app.use("/api/products", productsRouter);
-// app.use("/api/cart", cartRouter);
-// app.use("/api/coupons", couponRouter);
-// app.use("/api/payments", paymentRouter);
-// app.use("/api/analytics", analyticsRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/products", productsRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/coupons", couponRouter);
+app.use("/api/payments", paymentRouter);
+app.use("/api/analytics", analyticsRouter);
 
 if (process.env.NODE_ENV === "production") {
 
     app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-    app.get("*", (req, res) => {
+    app.get(/(.*)/, (req, res) => {
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
     });
 }
