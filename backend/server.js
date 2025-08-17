@@ -26,12 +26,12 @@ app.use(cookieParser());
 
 
 
-app.use("/api/auth", authRouter);
-app.use("/api/products", productsRouter);
-app.use("/api/cart", cartRouter);
-app.use("/api/coupons", couponRouter);
-app.use("/api/payments", paymentRouter);
-app.use("/api/analytics", analyticsRouter);
+// app.use("/api/auth", authRouter);
+// app.use("/api/products", productsRouter);
+// app.use("/api/cart", cartRouter);
+// app.use("/api/coupons", couponRouter);
+// app.use("/api/payments", paymentRouter);
+// app.use("/api/analytics", analyticsRouter);
 
 if (process.env.NODE_ENV === "production") {
 
