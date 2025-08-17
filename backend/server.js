@@ -4,12 +4,12 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path"
 
-import authRouter from "./routes/auth.route.js"
-import productsRouter from "./routes/products.route.js";
-import cartRouter from "./routes/cart.route.js";
-import couponRouter from "./routes/coupon.route.js";
-import paymentRouter from "./routes/payment.routes.js";
-import analyticsRouter from "./routes/analytics.route.js"
+// import authRouter from "./routes/auth.route.js"
+// import productsRouter from "./routes/products.route.js";
+// import cartRouter from "./routes/cart.route.js";
+// import couponRouter from "./routes/coupon.route.js";
+// import paymentRouter from "./routes/payment.routes.js";
+// import analyticsRouter from "./routes/analytics.route.js"
 
 dotenv.config();
 
