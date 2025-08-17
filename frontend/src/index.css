@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+.text-primary {
+  color: #345e42;
+}
+.bg-card-primary,
+.bg-tabs {
+  background-color: #f5e8d6;
+}
+.bg-tabs:hover {
+  @apply bg-green-100;
+}
